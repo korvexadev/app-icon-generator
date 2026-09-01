@@ -1,0 +1,70 @@
+/* ── preview ── */
+.preview-area {
+    display: none;
+    margin-top: 20px;
+    padding: 16px 20px;
+    background: #faf8f5;
+    border-radius: 14px;
+    border: 1px solid #e8e3de;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.preview-area.visible {
+    display: flex;
+}
+
+.preview-area .preview-img-wrap {
+    width: 64px;
+    height: 64px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e0dad4;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+.preview-area .preview-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.preview-area .preview-info {
+    flex: 1;
+    min-width: 140px;
+}
+
+.preview-area .preview-info .name {
+    font-weight: 500;
+    font-size: 15px;
+    color: #1a1715;
+    word-break: break-all;
+}
+
+.preview-area .preview-info .dims {
+    font-size: 13px;
+    color: #7a6e64;
+    margin-top: 1px;
+}
+
+.preview-area .preview-status {
+    font-size: 12px;
+    font-weight: 450;
+    background: #ede8e3;
+    color: #4a4038;
+    padding: 4px 16px;
+    border-radius: 30px;
+    white-space: nowrap;
+}
+
+.preview-area .preview-status.warning {
+    background: #f5ede4;
+    color: #7a5a3a;
+}

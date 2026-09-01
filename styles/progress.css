@@ -1,0 +1,37 @@
+/* ── progress ── */
+.progress-wrap {
+    margin-top: 18px;
+    display: none;
+}
+
+.progress-wrap.visible {
+    display: block;
+}
+
+.progress-bar-bg {
+    height: 5px;
+    background: #ede8e3;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background: #1a1715;
+    border-radius: 10px;
+    transition: width 0.2s ease;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #7a6e64;
+    margin-top: 6px;
+}
+
+.progress-label .count {
+    font-weight: 500;
+    color: #1a1715;
+}

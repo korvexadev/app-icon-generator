@@ -1,0 +1,29 @@
+/* ── header ── */
+.app-header {
+    margin-bottom: 30px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eeeae6;
+}
+
+.app-header h1 {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+    color: #1a1715;
+    font-family: "Georgia", "Times New Roman", serif;
+}
+
+.app-header h1 span {
+    font-weight: 400;
+    color: #8a7e74;
+    font-size: 16px;
+    letter-spacing: 0;
+    margin-left: 8px;
+}
+
+.app-header p {
+    font-size: 15px;
+    color: #6b625a;
+    margin-top: 4px;
+    font-weight: 400;
+}

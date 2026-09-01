@@ -1,0 +1,91 @@
+/* ── controls row ── */
+.controls {
+    margin-top: 24px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/* ── base button ── */
+.btn {
+    padding: 12px 34px;
+    border: none;
+    border-radius: 40px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s, opacity 0.2s, box-shadow 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex: 1 1 auto;
+    min-width: 120px;
+    letter-spacing: 0.15px;
+    font-family: inherit;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none !important;
+}
+
+.btn .btn-label {
+    line-height: 1;
+}
+
+/* ── primary ── */
+.btn-primary {
+    background: #1a1715;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(26, 23, 21, 0.12);
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: #0d0b09;
+    box-shadow: 0 4px 16px rgba(26, 23, 21, 0.18);
+}
+
+.btn-primary.generating {
+    background: #4a4038;
+}
+
+.btn-primary.done {
+    background: #2a5a3a;
+    box-shadow: 0 2px 8px rgba(42, 90, 58, 0.15);
+}
+
+.btn-primary.done:hover:not(:disabled) {
+    background: #1e4a2e;
+}
+
+/* ── success ── */
+.btn-success {
+    background: #2a5a3a;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(42, 90, 58, 0.12);
+}
+
+.btn-success:hover:not(:disabled) {
+    background: #1e4a2e;
+    box-shadow: 0 4px 16px rgba(42, 90, 58, 0.18);
+}
+
+/* ── outline ── */
+.btn-outline {
+    background: transparent;
+    color: #1a1715;
+    border: 1.5px solid #d6d0ca;
+}
+
+.btn-outline:hover:not(:disabled) {
+    background: #f5f0eb;
+    border-color: #b0a69c;
+}

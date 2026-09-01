@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>App Icon Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+    <!-- styles — one file per UI concern, mirrors src/ module boundaries -->
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/dropzone.css" />
+    <link rel="stylesheet" href="styles/preview.css" />
+    <link rel="stylesheet" href="styles/settings.css" />
+    <link rel="stylesheet" href="styles/buttons.css" />
+    <link rel="stylesheet" href="styles/progress.css" />
+    <link rel="stylesheet" href="styles/status.css" />
+    <link rel="stylesheet" href="styles/footer.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+</head>
+<body>
+
+    <div class="app">
+        <!-- header -->
+        <div class="group-label">
+            <h1>App Icon Generator</h1>
+            <p>iOS · Android · Web</p>
+        </div>
+<br />
+        <!-- drop zone -->
+        <div class="drop-zone" id="dropZone">
+            <div class="drop-icon">⬡</div>
+            <div class="drop-title">Drop your image here</div>
+            <div class="drop-hint">or click to browse &nbsp;·&nbsp; <span class="tag">PNG</span> <span class="tag">JPG</span> <span class="tag">WEBP</span></div>
+            <input type="file" id="fileInput" accept="image/*" />
+        </div>
+
+        <!-- preview -->
+        <div class="preview-area" id="previewArea">
+            <div class="preview-img-wrap">
+                <img id="previewImg" src="" alt="preview" />
+            </div>
+            <div class="preview-info">
+                <div class="name" id="previewName">image.png</div>
+                <div class="dims" id="previewDims">—</div>
+            </div>
+            <span class="preview-status" id="previewStatus">loaded</span>
+        </div>
+
+        <!-- settings -->
+        <div class="settings" id="settingsArea">
+            <!-- Background -->
+            <div class="setting-group full-width">
+                <span class="group-label">Background</span>
+                <div class="bg-controls" id="bgControls">
+                    <div class="color-picker-wrap">
+                        <input type="color" id="bgColor" value="#ffffff" />
+                        <span class="color-hex" id="colorHex">#ffffff</span>
+                    </div>
+                    <div class="quick-buttons">
+                        <button type="button" class="quick-btn" data-color="#ffffff">White</button>
+                        <button type="button" class="quick-btn" data-color="#000000">Black</button>
+                    </div>
+                    <label class="transparent-toggle">
+                        <input type="checkbox" id="bgTransparent" />
+                        Transparent
+                    </label>
+                </div>
+            </div>
+
+            <!-- Platforms -->
+            <div class="setting-group full-width">
+                <span class="group-label">Platforms</span>
+                <div class="platform-selector">
+                    <label class="label-group">
+                        <input type="checkbox" id="platformIOS" checked />
+                        iOS
+                        <span class="platform-tag">iPhone · iPad · Watch · Mac</span>
+                        <span class="count-badge">37</span>
+                    </label>
+                    <label class="label-group">
+                        <input type="checkbox" id="platformAndroid" checked />
+                        Android
+                        <span class="platform-tag">mipmap</span>
+                        <span class="count-badge">5</span>
+                    </label>
+                    <label class="label-group">
+                        <input type="checkbox" id="platformWeb" checked />
+                        Web / Favicon
+                        <span class="platform-tag">PNG · ICO · manifest</span>
+                        <span class="count-badge">7</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Zip filename -->
+            <div class="setting-group full-width">
+                <span class="group-label">Zip archive name</span>
+                <input type="text" class="zip-name-input" id="zipFilename" value="AppIcon-image.zip" />
+            </div>
+        </div>
+
+        <!-- controls -->
+        <div class="controls">
+            <button type="button" class="btn btn-primary" id="generateBtn" disabled>
+                <span class="btn-label">Generate Icons</span>
+            </button>
+            <button type="button" class="btn btn-success" id="downloadBtn" disabled>
+                <span class="btn-label">Download ZIP</span>
+            </button>
+            <button type="button" class="btn btn-outline" id="resetBtn">
+                <span class="btn-label">Reset</span>
+            </button>
+        </div>
+
+        <!-- progress -->
+        <div class="progress-wrap" id="progressWrap">
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" id="progressFill"></div>
+            </div>
+            <div class="progress-label">
+                <span id="progressLabel">Processing</span>
+                <span class="count" id="progressCount">0 / 0</span>
+            </div>
+        </div>
+
+        <!-- status -->
+        <div class="status" id="status"></div>
+
+        
+    </div>
+
+    <script type="module" src="src/main.js"></script>
+
+</body>
+</html>

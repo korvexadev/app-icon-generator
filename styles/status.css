@@ -1,0 +1,31 @@
+/* ── status banner ── */
+.status {
+    margin-top: 14px;
+    font-size: 14px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    display: none;
+    align-items: center;
+    gap: 10px;
+    background: #f5f0eb;
+    color: #3a3530;
+}
+
+.status.visible {
+    display: flex;
+}
+
+.status.error {
+    background: #f7eee8;
+    color: #8a3a2a;
+}
+
+.status.success {
+    background: #eaf3ec;
+    color: #2a5a3a;
+}
+
+.status.info {
+    background: #f5f0eb;
+    color: #3a3530;
+}

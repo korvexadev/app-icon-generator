@@ -1,0 +1,59 @@
+/* ── drop zone ── */
+.drop-zone {
+    border: 2px dashed #d6d0ca;
+    border-radius: 16px;
+    padding: 44px 20px 38px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.25s, background 0.2s;
+    background: #fcfaf8;
+    position: relative;
+}
+
+.drop-zone:hover {
+    border-color: #b0a69c;
+    background: #faf8f5;
+}
+
+.drop-zone.dragover {
+    border-color: #6b5f54;
+    background: #f5f0eb;
+}
+
+.drop-zone .drop-icon {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 6px;
+    color: #8a7e74;
+    letter-spacing: 0;
+}
+
+.drop-zone .drop-title {
+    font-size: 17px;
+    font-weight: 500;
+    color: #1a1715;
+    margin-bottom: 2px;
+}
+
+.drop-zone .drop-hint {
+    font-size: 14px;
+    color: #8a7e74;
+    margin-top: 4px;
+}
+
+.drop-zone .drop-hint .tag {
+    background: #ede8e3;
+    padding: 1px 12px;
+    border-radius: 30px;
+    font-size: 12px;
+    color: #5a4f46;
+    margin: 0 2px;
+    display: inline-block;
+}
+
+.drop-zone input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+}

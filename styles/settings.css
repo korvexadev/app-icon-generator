@@ -1,0 +1,205 @@
+/* ── settings grid ── */
+.settings {
+    margin-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 32px;
+    padding-top: 18px;
+    border-top: 1px solid #eeeae6;
+}
+
+.settings .full-width {
+    grid-column: 1 / -1;
+}
+
+.setting-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.setting-group .group-label {
+    font-size: 12px;
+    font-weight: 500;
+    color: #4a4038;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* ── background controls ── */
+.bg-controls {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 14px;
+    background: #faf8f5;
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid #ede8e3;
+}
+
+.bg-controls .color-picker-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1 1 auto;
+    min-width: 140px;
+}
+
+.bg-controls input[type="color"] {
+    width: 40px;
+    height: 40px;
+    padding: 2px;
+    border: 2px solid #d6d0ca;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #ffffff;
+    flex-shrink: 0;
+}
+
+.bg-controls input[type="color"]:hover {
+    border-color: #b0a69c;
+}
+
+.bg-controls .color-hex {
+    font-size: 14px;
+    font-weight: 450;
+    color: #3a3530;
+    font-family: "SF Mono", "Menlo", monospace;
+    background: #ffffff;
+    padding: 2px 12px;
+    border-radius: 8px;
+    border: 1px solid #e0dad4;
+    min-width: 72px;
+    text-align: center;
+}
+
+.bg-controls .quick-buttons {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.bg-controls .quick-btn {
+    padding: 4px 16px;
+    border: 1px solid #d6d0ca;
+    border-radius: 30px;
+    background: #ffffff;
+    font-size: 13px;
+    font-weight: 450;
+    color: #3a3530;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s;
+    font-family: inherit;
+}
+
+.bg-controls .quick-btn:hover {
+    background: #f0ebe6;
+    border-color: #b0a69c;
+}
+
+.bg-controls .quick-btn.active {
+    background: #e0dad4;
+    border-color: #8a7e74;
+}
+
+.bg-controls .transparent-toggle {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    color: #4a4038;
+    cursor: pointer;
+    user-select: none;
+    padding: 2px 6px;
+    border-radius: 6px;
+    transition: background 0.15s;
+}
+
+.bg-controls .transparent-toggle:hover {
+    background: #f0ebe6;
+}
+
+.bg-controls .transparent-toggle input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: #5a4f46;
+    cursor: pointer;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+/* ── platform selector ── */
+.platform-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 24px;
+    padding: 8px 0 2px;
+}
+
+.platform-selector .label-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 450;
+    color: #1a1715;
+    cursor: pointer;
+    user-select: none;
+    padding: 4px 10px 4px 6px;
+    border-radius: 30px;
+    transition: background 0.15s;
+}
+
+.platform-selector .label-group:hover {
+    background: #f5f0eb;
+}
+
+.platform-selector .label-group input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: #5a4f46;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.platform-selector .label-group .platform-tag {
+    font-size: 12px;
+    font-weight: 400;
+    color: #7a6e64;
+}
+
+.platform-selector .label-group .count-badge {
+    font-size: 11px;
+    background: #ede8e3;
+    color: #5a4f46;
+    padding: 0 10px;
+    border-radius: 30px;
+    font-weight: 400;
+}
+
+/* ── zip filename input ── */
+.zip-name-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #d6d0ca;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: inherit;
+    color: #1a1715;
+    background: #fcfaf8;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    outline: none;
+}
+
+.zip-name-input:focus {
+    border-color: #8a7e74;
+    box-shadow: 0 0 0 3px rgba(90, 79, 70, 0.08);
+    background: #ffffff;
+}
+
+.zip-name-input::placeholder {
+    color: #b0a69c;
+}

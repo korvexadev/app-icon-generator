@@ -1,0 +1,94 @@
+/* ── responsive ── */
+
+@media (max-width: 700px) {
+    .settings {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 540px) {
+    .app {
+        padding: 24px 16px 28px;
+        border-radius: 16px;
+    }
+
+    .app-header h1 {
+        font-size: 22px;
+    }
+
+    .app-header h1 span {
+        font-size: 14px;
+        display: block;
+        margin-left: 0;
+        margin-top: 2px;
+    }
+
+    .bg-controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .bg-controls .color-picker-wrap {
+        min-width: auto;
+    }
+
+    .bg-controls .quick-buttons {
+        justify-content: center;
+    }
+
+    .platform-selector {
+        gap: 8px 16px;
+    }
+
+    .platform-selector .label-group {
+        font-size: 14px;
+        padding: 2px 8px 2px 4px;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        flex: 1 1 100%;
+        min-width: 80px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .preview-area {
+        padding: 14px 16px;
+        gap: 12px;
+    }
+
+    .preview-area .preview-img-wrap {
+        width: 50px;
+        height: 50px;
+    }
+
+    .drop-zone {
+        padding: 30px 16px 26px;
+    }
+
+    .drop-zone .drop-title {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .platform-selector .label-group {
+        font-size: 13px;
+    }
+
+    .platform-selector .label-group .count-badge {
+        font-size: 10px;
+        padding: 0 6px;
+    }
+
+    .bg-controls .color-hex {
+        font-size: 12px;
+        min-width: 60px;
+    }
+}
